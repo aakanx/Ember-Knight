@@ -1,0 +1,6 @@
+{
+  "name": "Ember Knight: Blazing Ascent",
+  "description": "An action platformer where you run, jump, and unleash devastating fireball special moves with arrow keys and spacebar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

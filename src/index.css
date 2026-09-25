@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@keyframes slowBlink {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.4));
+  }
+  50% {
+    opacity: 0.35;
+    filter: drop-shadow(0 0 0px transparent);
+  }
+}
+
+.animate-slow-blink {
+  animation: slowBlink 3.2s ease-in-out infinite;
+}
