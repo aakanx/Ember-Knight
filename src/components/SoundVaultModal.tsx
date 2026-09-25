@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, Flame, Download, Play, Pause, Music, Lock, CheckCircle2, Sparkles, Disc, Radio, AlertCircle } from 'lucide-react';
+import { X, Flame, Download, Play, Pause, Music, Lock, CheckCircle2, Disc, Radio, AlertCircle } from 'lucide-react';
 import { ChapterCompletionRecord } from '../types/game';
 import { soundManager } from '../utils/audio';
 import { renderBossTrackToWav, downloadBlob } from '../utils/audioExporter';
@@ -89,8 +89,7 @@ export const SoundVaultModal: React.FC<SoundVaultModalProps> = ({ onClose, chapt
           </div>
           <div className="text-left">
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-400/90 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 flex items-center gap-1">
-                <Sparkles className="w-3 h-3 text-amber-400" />
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-400/90 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30">
                 Easter Egg
               </span>
               {isUnlocked && (
