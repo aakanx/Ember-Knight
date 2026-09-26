@@ -12,32 +12,4 @@
 
 ## Built with Google AI Studio & Gemini 3.8 Flash
 
-This project was created as an experimental **vibe coding** project using **[Google AI Studio](https://aistudio.google.com/)** and **Gemini 3.8 Flash**.
-
----
-
-## Local Development
-
-Clone the repository and run the dev server locally:
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/aakanx/Ember-Knight.git
-cd Ember-Knight
-
-# 2. Install dependencies
-npm install --legacy-peer-deps
-
-# 3. Start local development server
-npm run dev
-```
-
-Visit `http://localhost:3000` to play locally.
-
-### Production Build
-
-```bash
-npm run build
-```
-
-The bundled static assets will be output to `/dist`, ready to deploy on GitHub Pages or any static host.
+This project was created entirely as an experimental **vibe coding** project using **[Google AI Studio](https://aistudio.google.com/)** and **Gemini 3.8 Flash**.
