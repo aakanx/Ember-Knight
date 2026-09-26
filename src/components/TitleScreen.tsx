@@ -2,6 +2,7 @@ import React from 'react';
 import { Play, Trophy, Flame, ArrowRight, Lock, CheckCircle2, RotateCcw, Gem, Coins } from 'lucide-react';
 import { LEVELS } from '../game/levels';
 import { ChapterCompletionRecord } from '../types/game';
+import gameCoverImg from '../assets/images/game_cover_ember_knight_1790286808038.jpg';
 
 interface TitleScreenProps {
   onStartGame: (levelId: number) => void;
@@ -42,7 +43,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
       {/* Background Graphic */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img
-          src="/src/assets/images/game_cover_ember_knight_1790286808038.jpg"
+          src={gameCoverImg}
           alt="Ember Knight Game Cover"
           className="w-full h-full object-cover opacity-35 filter blur-[2px] scale-105"
           referrerPolicy="no-referrer"

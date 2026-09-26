@@ -1,4 +1,7 @@
 import { LevelData } from '../types/game';
+import whisperingCanopyBanner from '../assets/images/stage_whispering_canopy_1790286819880.jpg';
+import moltenCitadelBanner from '../assets/images/stage_molten_citadel_1790286830075.jpg';
+import gameCoverBanner from '../assets/images/game_cover_ember_knight_1790286808038.jpg';
 
 export const LEVELS: LevelData[] = [
   {
@@ -6,7 +9,7 @@ export const LEVELS: LevelData[] = [
     title: 'The Whispering Canopy',
     subtitle: 'Chapter I: Awaken the Fire Within',
     theme: 'FOREST',
-    bannerImage: '/src/assets/images/stage_whispering_canopy_1790286819880.jpg',
+    bannerImage: whisperingCanopyBanner,
     width: 3200,
     height: 720,
     ambientColor: '#0b1d16',
@@ -199,7 +202,7 @@ export const LEVELS: LevelData[] = [
     title: 'Molten Caverns',
     subtitle: 'Chapter II: The Heart of Fire',
     theme: 'CAVERN',
-    bannerImage: '/src/assets/images/stage_molten_citadel_1790286830075.jpg',
+    bannerImage: moltenCitadelBanner,
     width: 3600,
     height: 720,
     ambientColor: '#200b08',
@@ -396,7 +399,7 @@ export const LEVELS: LevelData[] = [
     title: 'The Obsidian Citadel',
     subtitle: 'Final Chapter: Wyrm of Embers',
     theme: 'CITADEL',
-    bannerImage: '/src/assets/images/game_cover_ember_knight_1790286808038.jpg',
+    bannerImage: gameCoverBanner,
     width: 2400,
     height: 720,
     ambientColor: '#120b1f',
