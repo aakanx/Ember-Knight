@@ -13,15 +13,13 @@ export const SoundVaultModal: React.FC<SoundVaultModalProps> = ({ onClose, chapt
   const [isPlayingPreview, setIsPlayingPreview] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportSuccess, setExportSuccess] = useState(false);
-  const [secretBypass, setSecretBypass] = useState(false);
-  const [bypassClicks, setBypassClicks] = useState(0);
 
   const ch1Percent = chapterRecords[1]?.percentage ?? 0;
   const ch2Percent = chapterRecords[2]?.percentage ?? 0;
   const ch3Percent = chapterRecords[3]?.percentage ?? 0;
 
   const isNaturallyUnlocked = ch1Percent >= 100 && ch2Percent >= 100 && ch3Percent >= 100;
-  const isUnlocked = isNaturallyUnlocked || secretBypass;
+  const isUnlocked = isNaturallyUnlocked;
 
   // Manage track preview
   useEffect(() => {
@@ -56,14 +54,6 @@ export const SoundVaultModal: React.FC<SoundVaultModalProps> = ({ onClose, chapt
       console.error('Failed to export boss soundtrack:', err);
     } finally {
       setIsExporting(false);
-    }
-  };
-
-  const handleSecretLockClick = () => {
-    const next = bypassClicks + 1;
-    setBypassClicks(next);
-    if (next >= 5) {
-      setSecretBypass(true);
     }
   };
 
@@ -228,14 +218,7 @@ export const SoundVaultModal: React.FC<SoundVaultModalProps> = ({ onClose, chapt
           <div>
             <div className="bg-slate-950/80 border border-slate-800 rounded-xl p-4.5 mb-5 text-left">
               <div className="flex items-center gap-2 text-amber-400 text-sm font-bold mb-2">
-                <button
-                  type="button"
-                  onClick={handleSecretLockClick}
-                  title="Ember Knight Vault"
-                  className="cursor-pointer hover:text-amber-300 transition-colors inline-flex items-center"
-                >
-                  <Lock className="w-4 h-4" />
-                </button>
+                <Lock className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>The Sound Vault is Sealed</span>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed mb-4">
@@ -301,17 +284,11 @@ export const SoundVaultModal: React.FC<SoundVaultModalProps> = ({ onClose, chapt
               </div>
             </div>
 
-            {/* Quick Testing Shortcut (in case user wants to test download right now!) */}
-            <div className="flex items-center justify-between pt-1">
-              <button
-                onClick={() => setSecretBypass(true)}
-                className="text-[11px] text-amber-500/70 hover:text-amber-400 underline underline-offset-2 transition-colors cursor-pointer"
-              >
-                Instant Unlock for Testing
-              </button>
+            {/* Actions */}
+            <div className="flex items-center justify-end pt-1">
               <button
                 onClick={onClose}
-                className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-lg cursor-pointer transition-colors"
+                className="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-xl cursor-pointer transition-colors"
               >
                 Close
               </button>

@@ -65,7 +65,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           EMBER <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500">KNIGHT</span>
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-xl mb-6 leading-relaxed">
-          Master the ancient flame. Run, jump, and incinerate foes with blazing fireball special moves to liberate the realm from the Wyrm of Embers.
+          Master the ancient flame. Run, jump, and incinerate foes with blazing fireball special moves to liberate the Pyros realm from the Wyrm of Embers.
         </p>
 
         {/* Primary Action Button */}
@@ -255,26 +255,33 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
         </div>
 
         {/* Moves & Controls Reminder Box */}
-        <div className="bg-slate-900/60 backdrop-blur-md px-5 py-3 rounded-xl border border-slate-800/80 text-xs text-slate-400 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-          <div className="flex items-center gap-1.5">
-            <span className="font-mono text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded">← / →</span>
-            <span>Move</span>
+        <div className="bg-slate-900/60 backdrop-blur-md px-6 py-3 rounded-xl border border-slate-800/80 text-xs text-slate-400 flex flex-col items-center justify-center gap-2.5">
+          {/* Row 1: Movement Controls */}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <div className="flex items-center gap-1.5">
+              <span className="font-mono text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded">← / →</span>
+              <span>Move</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="font-mono text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded">↑</span>
+              <span>Jump & Double Jump</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="font-mono text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded">↓</span>
+              <span>Drop Platform</span>
+            </div>
           </div>
-          <div className="flex items-center gap-1.5">
-            <span className="font-mono text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded">↑</span>
-            <span>Jump & Double Jump</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="font-mono text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded">↓</span>
-            <span>Drop Platform</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="font-mono text-amber-400 font-bold bg-amber-950/80 border border-amber-600/40 px-2 py-0.5 rounded">SPACE</span>
-            <span className="text-amber-200">Fireball (Tap: Dart · Hold: Mega Blast)</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="font-mono text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded">SHIFT</span>
-            <span className="text-rose-300">Flame Dash (Invulnerable)</span>
+
+          {/* Row 2: Special Actions (Fireball & Dash) */}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <div className="flex items-center gap-1.5">
+              <span className="font-mono text-amber-400 font-bold bg-amber-950/80 border border-amber-600/40 px-2 py-0.5 rounded">SPACE</span>
+              <span className="text-amber-200">Fireball (Tap: Dart · Hold: Mega Blast)</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="font-mono text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded">SHIFT</span>
+              <span className="text-rose-300">Flame Dash (Invulnerable)</span>
+            </div>
           </div>
         </div>
       </div>
