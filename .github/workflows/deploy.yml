@@ -3,12 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ['main']
-    paths-ignore:
-      - 'README.md'
-      - 'README*'
-      - 'docs/**'
-      - '.gitignore'
-      - 'LICENSE*'
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'index.html'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - 'vite.config.ts'
   workflow_dispatch:
 
 permissions:
